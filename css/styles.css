@@ -575,7 +575,7 @@ a:visited {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: white;
-  margin-bottom: 16px;
+  margin-bottom: 16px !important;
 }
 
 .footer-social-list {
@@ -600,6 +600,7 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover {
