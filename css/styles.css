@@ -98,7 +98,7 @@ a:visited {
 .nav-item:nth-child(1) .nav-link {
   color: #404bbf;
   position: relative;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-item:nth-child(1) .nav-link::after {
@@ -408,6 +408,42 @@ a:visited {
   fill: white;
 }
 
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-item {
+  width: 40px;
+  height: 40px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color, #4d5ae5);
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: #404bbf;
+}
+
+.social-icon {
+  fill: var(--icon-color, #f4f4fd);
+  width: 16px;
+  height: 16px;
+}
+
 .portfolio {
   width: 100%;
   padding: 120px;
@@ -450,6 +486,10 @@ a:visited {
   width: calc((100% - 48px) / 3);
 }
 
+.pm-item:nth-child(1) {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .pm-hidden {
   width: 100%;
   height: 100%;
@@ -462,6 +502,7 @@ a:visited {
   color: #f4f4fd;
   padding: 40px 32px;
   transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pm-image-block {
@@ -486,7 +527,7 @@ a:visited {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.pm-item:hover .pm-container {
+.pm-container:hover {
   cursor: pointer;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -494,7 +535,6 @@ a:visited {
 
 .pm-item:hover .pm-hidden {
   transform: translateY(0%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pt-title {
